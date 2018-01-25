@@ -5,16 +5,16 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <title>Wheather</title>
+    <title>Weather</title>
 </head>
 <body>
     <div class="container">
      <div class="row" id="head"></div>
       
        <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4" id="main">
-               <h1>Weather in your City!</h1>
+        <div class="col-md-3"></div>
+        <div class="col-md-6" id="main">
+               <h2 class="text-center">Weather in your City!</h2>
                 <table>
                     <tr>
                         <td><input size="20" placeholder="Example:Kosice" id="city" type="text"></td>
@@ -26,13 +26,14 @@
                         <td><input type="checkbox" id="details">Details</td>
                     </tr>
                     <tr>
-                        <td><button id="ok">Show the weather</button></td>
+                        <td><button class="btn btn-info" id="ok">Show the weather</button></td>
                     </tr>
                 </table>
+                <div id="content"></div>
             
         </div>
-        <div class="col-md-4"></div>
-       </div>
+        <div class="col-md-3"></div>
+        </div>
     </div>
     
     

@@ -1,7 +1,6 @@
 body{
     background-image: url(../4097.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
 }
 #city{
     margin-bottom: 10px;
@@ -24,8 +23,22 @@ table{
 
 }
 #head{
-    margin: 100px;
+    margin: 8%;
 }
 h1{
     margin: auto;
+}
+
+#ok{
+    margin-top: 10px;
+}
+p{
+    margin: auto;
+}
+#content{
+    margin: 20px;
+}
+
+#cont tr{
+    background-color:ghostwhite;
 }
