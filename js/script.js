@@ -28,7 +28,7 @@ $(document).ready(function(){
                 var tr=getLine('City',city);
                 table.append(tr);
                 
-                tr=getLine("Temperature", data.main.temp-273.15);
+                tr=getLine("Temperature", Math.floor(data.main.temp-273.15));
                 table.append(tr);
                 
                 tr=getLine("Humidity", data.main.humidity);
@@ -45,23 +45,30 @@ $(document).ready(function(){
                     var rise=new Date(data.sys.sunrise*1000);
                     var set=new Date(data.sys.sunset*1000);
                     
-                tr=getLine("Sunrise", rise);
+                tr=getLine("Sunrise", new Date(data.sys.sunrise*1000).getHours()+':'+new Date(data.sys.sunrise*1000).getMinutes());
                 table.append(tr);
                 
-                tr=getLine("Sunset", set);
+                tr=getLine("Sunset", new Date(data.sys.sunset*1000).getHours()+':'+new Date(data.sys.sunset*1000).getMinutes());
                 table.append(tr);
                 
                 tr=getLine("Wind", data.wind.speed+' km/h');
                 table.append(tr);
                 
-                tr=getLine("Min temperature", data.main.temp_min);
+                tr=getLine("Min temperature", Math.floor(data.main.temp_min));
                 table.append(tr);
                 
-                tr=getLine("Max temperature", data.main.temp_max);
+                tr=getLine("Max temperature", Math.floor(data.main.temp_max));
                 table.append(tr);
                 
                 tr=getLine("Visibility", data.visibility);
-                table.append(tr)
+                table.append(tr);
+                    
+                tr=getLine("Link on Google Maps","<a href=\"https://google.com/maps/search/?api=1&query="+data.coord.lat+","+data.coord.lon+"\" target=\"blank\">"+city+"</a>");
+                table.append(tr);
+                    
+                    
+                
+                
                 
                 }
                 
